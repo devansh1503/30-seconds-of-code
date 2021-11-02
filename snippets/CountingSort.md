@@ -1,0 +1,27 @@
+---
+title: CountingSort
+tags: algorithm,array,beginner
+---
+Counting sort algorithm works by counting distinct objects, and then calculating their position in the output.
+1. The array containing count operates between the minimum and maximum value of given array.
+2. The output contains the elements with count more than 0 and thus decrements its count.
+3. This algorithm is efficient for handling duplicates. And has a time complexity of n+k.
+```js
+const countingSort = (arr, min, max) => {
+    const count = {};
+    for (let i = min; i <= max; i++) {
+        count[i] = 0;
+    }
+    for (let i = 0; i < arr.length; i++) {
+        count[arr[i]] += 1;
+    }
+    const sortedArray = [];
+    for (let i = min; i <= max; i++) {
+        while (count[i] > 0) {
+            sortedArray.push(i);
+            count[i]--;
+        }
+    }
+    return sortedArray;
+};
+```
