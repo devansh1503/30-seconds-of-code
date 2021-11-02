@@ -1,6 +1,8 @@
 ---
 title: CountingSort
 tags: algorithm,array,beginner
+firstSeen: 2021-11-2
+lastUpdated: 2021-11-2
 ---
 Counting sort algorithm works by counting distinct objects, and then calculating their position in the output.
 1. The array containing count operates between the minimum and maximum value of given array.
