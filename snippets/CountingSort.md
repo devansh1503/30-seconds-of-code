@@ -27,3 +27,6 @@ const countingSort = (arr, min, max) => {
     return sortedArray;
 };
 ```
+```js
+countingSort([2,7,8,3,6,6],2,8);//2,3,6,6,7,8
+```
